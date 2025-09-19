@@ -4,8 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0103e7c5-9955-4721-9bb2-d5fa79a3ecb5" name="Changes" comment="SCRU-14 &lt;menu_backend&gt;">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="07c8120c-4e8e-4327-8c71-d16595cec12e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/palmbeach/menu/MenuApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/palmbeach/menu/MenuApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,21 +23,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;Jenitha23&quot;
-  }
-}</component>
-  <component name="GithubDefaultAccount">
-    <option name="defaultAccountId" value="5454192d-c604-4613-b2c3-93d73557fc17" />
-  </component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Jenitha23/Hotel-Management-System-Backend.git&quot;,
-    &quot;accountId&quot;: &quot;5454192d-c604-4613-b2c3-93d73557fc17&quot;
-  }
-}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -38,43 +31,39 @@
     </option>
   </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 1
+  &quot;associatedIndex&quot;: 2
 }</component>
-  <component name="ProjectId" id="32sgZxx4J1eL00UHPFpg10Uqix1" />
+  <component name="ProjectId" id="333izRKtOU9snGrDyKYiSdxjyfG" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
+    <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;SCRU-135-API-to-fetch-menu-items&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Spring Boot.MenuApplication.executor": "Run",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected="Spring Boot.MenuApplication">
-    <configuration name="MenuApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="menu" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.order.menu.MenuApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+}]]></component>
+  <component name="RunManager">
     <configuration name="MenuApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="menu" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.menu.MenuApplication" />
+      <module name="palm-beach-menu" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.palmbeach.menu.MenuApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -83,78 +72,17 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="0103e7c5-9955-4721-9bb2-d5fa79a3ecb5" name="Changes" comment="" />
-      <created>1758214755124</created>
+      <changelist id="07c8120c-4e8e-4327-8c71-d16595cec12e" name="Changes" comment="" />
+      <created>1758552422175</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1758214755124</updated>
-      <workItem from="1758214756692" duration="4900000" />
-      <workItem from="1758264233693" duration="1001000" />
-      <workItem from="1758306655036" duration="55000" />
-      <workItem from="1758306730279" duration="357000" />
+      <updated>1758552422175</updated>
+      <workItem from="1758552423612" duration="3783000" />
+      <workItem from="1758561769261" duration="5909000" />
     </task>
-    <task id="LOCAL-00001" summary="SCRU-14 &lt;menu_backend&gt;">
-      <option name="closed" value="true" />
-      <created>1758221967528</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1758221967528</updated>
-    </task>
-    <task id="LOCAL-00002" summary="SCRU-14 &lt;menu_backend&gt;">
-      <option name="closed" value="true" />
-      <created>1758222036836</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1758222036836</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="RECENT_FILTERS">
-      <map>
-        <entry key="Branch">
-          <value>
-            <list>
-              <RecentGroup>
-                <option name="FILTER_VALUES">
-                  <option value="SCRU-14-As-a-customer-I-want-to-view-the-food-menu-from-my-room" />
-                </option>
-              </RecentGroup>
-            </list>
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="SCRU-14-As-a-customer-I-want-to-view-the-food-menu-from-my-room" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="SCRU-14 &lt;menu_backend&gt;" />
-    <option name="LAST_COMMIT_MESSAGE" value="SCRU-14 &lt;menu_backend&gt;" />
   </component>
 </project>
