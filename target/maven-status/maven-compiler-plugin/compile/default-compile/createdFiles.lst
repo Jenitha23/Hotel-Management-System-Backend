@@ -1,8 +1,0 @@
-com\menu\entity\MenuItem.class
-com\menu\config\WebConfig.class
-com\menu\config\WebConfig$1.class
-com\menu\repository\MenuItemRepository.class
-com\order\menu\MenuApplication.class
-com\menu\controller\MenuItemController.class
-com\menu\service\MenuItemService.class
-com\menu\service\MenuItemServiceImpl.class
