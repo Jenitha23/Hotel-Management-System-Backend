@@ -35,16 +35,16 @@ public class MenuItem {
     private Boolean available = true;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "category_id")
+    @JoinColumn(name = "Category_id")
     private Category category;
 
     @Column(nullable = false)
     private Boolean deleted = false;
 
-    @Column(name = "created_at")
+    @Column(name = "Created_at")
     private LocalDateTime createdAt;
 
-    @Column(name = "updated_at")
+    @Column(name = "Updated_at")
     private LocalDateTime updatedAt;
 
     @PrePersist
