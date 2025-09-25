@@ -14,4 +14,5 @@ INSERT IGNORE INTO menu_items (name, description, price, image_url, available, d
 ('Key Lime Pie', 'Classic Florida key lime pie with graham cracker crust', 8.99, 'https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?w=400&h=300&fit=crop', TRUE, FALSE, 3, NOW(), NOW()),
 ('Tropical Sunrise', 'Fresh orange juice with grenadine and pineapple garnish', 6.99, 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=400&h=300&fit=crop', TRUE, FALSE, 4, NOW(), NOW()),
 ('Beachside Caesar Salad', 'Fresh romaine with parmesan and classic Caesar dressing', 12.99, 'https://images.unsplash.com/photo-1540420773420-3366772f4999?w=400&h=300&fit=crop', TRUE, FALSE, 5, NOW(), NOW()),
-('Lobster Thermidor', 'Premium lobster baked with creamy mushroom sauce', 32.99, 'https://images.unsplash.com/photo-1563379091339-03246963d8df?w=400&h=300&fit=crop', TRUE, FALSE, 6, NOW(), NOW());
+('Lobster Thermidor', 'Premium lobster baked with creamy mushroom sauce', 32.99, 'https://images.unsplash.com/photo-1563379091339-03246963d8df?w=400&h=300&fit=crop', TRUE, FALSE, 6, NOW(), NOW()),
+('Chocolate Cake', 'Rich and decadent dessert featuring a tender, moist crumb and a deep cocoa flavor', 8.5, 'https://static.toiimg.com/thumb/53096885.cms?imgsize=1572013&width=800&height=800', True, FALSE, 3, NOW(), NOW());
