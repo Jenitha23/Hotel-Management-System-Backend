@@ -37,6 +37,6 @@ public class Booking {
     private String specialRequest;
 
     @Version
-    private Long version; // optimistic locking
+    private Long version;
 }
 

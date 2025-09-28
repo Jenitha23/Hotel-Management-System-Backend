@@ -14,5 +14,5 @@ public class Room {
     private String roomNumber;
 
     @Column(nullable = false, length = 50)
-    private String roomType; // e.g., DELUXE, STANDARD, SUITE
+    private String roomType;
 }
