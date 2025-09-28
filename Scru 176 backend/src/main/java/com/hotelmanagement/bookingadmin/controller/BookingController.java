@@ -78,7 +78,7 @@ public class BookingController {
         return ResponseEntity.ok(service.getById(id));
     }
 
-    // SCRU-178: update status
+    // SCRU-178: Update Status
     @PutMapping("/{id}/status")
     public ResponseEntity<BookingDetailDto> updateStatus(
             @PathVariable Long id,
@@ -87,7 +87,7 @@ public class BookingController {
         return ResponseEntity.ok(service.updateStatus(id, req));
     }
 
-    // SCRU-179: edit details
+    // SCRU-179: Edit Details
     @PutMapping("/{id}")
     public ResponseEntity<BookingDetailDto> updateBooking(
             @PathVariable Long id,
