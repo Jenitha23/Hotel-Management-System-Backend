@@ -30,7 +30,7 @@ public class BookingSpecifications {
             Path<LocalDate> checkOut = root.get("checkOutDate");
 
             if (from != null && to != null) {
-                // overlap condition: (checkIn <= to) AND (checkOut >= from)
+
                 return cb.and(
                         cb.lessThanOrEqualTo(checkIn, to),
                         cb.greaterThanOrEqualTo(checkOut, from)
