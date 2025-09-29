@@ -57,7 +57,7 @@ public class BookingController {
                     .body(new ApiResponse(false, e.getMessage()));
         }
     }
-
+// cancel booking
     @PutMapping("/{id}/cancel")
     public ResponseEntity<ApiResponse> cancelBooking(@PathVariable Long id) {
         try {
@@ -76,7 +76,7 @@ public class BookingController {
         try {
             List<BookingResponse> bookings = bookingService.getAllBookings();
             return ResponseEntity.ok(
-                    new ApiResponse(true, "All bookings retrieved successfully", bookings)
+                    new ApiResponse(true, "All bookings retrieved ", bookings)
             );
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
