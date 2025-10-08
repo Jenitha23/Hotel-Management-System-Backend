@@ -17,7 +17,7 @@ public class Order {
     private String orderNumber;
 
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    @JoinColumn(name = "order_id")
+    @JoinColumn(name = "Order_id")
     private List<OrderItem> items = new ArrayList<>();
 
     private BigDecimal subtotal;
