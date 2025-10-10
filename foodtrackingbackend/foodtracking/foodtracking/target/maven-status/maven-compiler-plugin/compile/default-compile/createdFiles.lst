@@ -1,0 +1,11 @@
+com\foodtracking\service\FoodOrderService.class
+com\foodtracking\config\CorsConfig.class
+com\foodtracking\config\DataInitializer.class
+com\foodtracking\controller\FoodOrderController.class
+com\foodtracking\dto\FoodOrderDTO.class
+com\foodtracking\dto\OrderSummaryDTO.class
+com\foodtracking\model\FoodOrder.class
+com\foodtracking\config\CorsConfig$1.class
+com\foodtracking\model\OrderStatus.class
+com\foodtracking\repository\FoodOrderRepository.class
+com\foodtracking\FoodTrackingApplication.class
