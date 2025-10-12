@@ -1,0 +1,11 @@
+-- Create database (run this separately in MySQL)
+CREATE DATABASE IF NOT EXISTS palm_beach_resort;
+USE palm_beach_resort;
+
+-- Sample data (Spring Boot will auto-execute this if placed in src/main/resources/data.sql)
+INSERT INTO orders (id, customer_name, room_number, item, quantity, order_time, estimated_time, status, location, special_instructions, priority, created_at, updated_at) VALUES
+                                                                                                                                                                              ('ORD-001', 'Sarah Johnson', '247', 'Sunset Dinner Special', 1, '6:30 PM', '7:15 PM', 'PREPARING', 'Beachside Restaurant', 'No shellfish', 'NORMAL', NOW(), NOW()),
+                                                                                                                                                                              ('ORD-002', 'Sarah Johnson', '247', 'Beach Bar & Appetizers', 1, '5:45 PM', '6:00 PM', 'READY_TO_DELIVER', 'Pool Bar', NULL, 'NORMAL', NOW(), NOW()),
+                                                                                                                                                                              ('ORD-003', 'Mike Chen', '156', 'Tropical Breakfast Buffet', 2, '8:00 AM', '8:30 AM', 'DELIVERED', 'Main Restaurant', NULL, 'NORMAL', NOW(), NOW()),
+                                                                                                                                                                              ('ORD-004', 'Emily Davis', '312', 'Poolside Lunch & Cocktails', 1, '12:30 PM', '1:00 PM', 'DONE', 'Pool Grill', 'Extra spicy', 'HIGH', NOW(), NOW()),
+                                                                                                                                                                              ('ORD-005', 'Robert Wilson', '089', 'Room Service Breakfast', 1, '7:15 AM', '8:00 AM', 'ORDERED', 'Room Service', NULL, 'URGENT', NOW(), NOW());
