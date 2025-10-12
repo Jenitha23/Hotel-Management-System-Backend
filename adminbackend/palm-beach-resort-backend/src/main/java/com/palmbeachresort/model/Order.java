@@ -10,8 +10,7 @@ import java.time.LocalDateTime;
 public class Order {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
-    private String id;
+    private String id; // Remove @GeneratedValue since we're using custom IDs
 
     @NotBlank(message = "Customer name is required")
     @Column(name = "customer_name", nullable = false)
@@ -68,6 +67,11 @@ public class Order {
     public Order() {
         this.createdAt = LocalDateTime.now();
         this.updatedAt = LocalDateTime.now();
+    }
+
+    public Order(String id) {
+        this();
+        this.id = id;
     }
 
     @PreUpdate
