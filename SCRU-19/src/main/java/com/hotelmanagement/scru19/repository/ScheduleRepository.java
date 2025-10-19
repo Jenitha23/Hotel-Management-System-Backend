@@ -1,4 +1,4 @@
-package com.hotelmanagement.scru19.Repository;
+package com.hotelmanagement.scru19.repository;
 
 import com.hotelmanagement.scru19.model.Schedule;
 import org.springframework.data.jpa.repository.JpaRepository;
