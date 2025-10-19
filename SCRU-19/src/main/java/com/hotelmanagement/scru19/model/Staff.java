@@ -1,4 +1,4 @@
 package com.hotelmanagement.scru19.model;
 
-public class staff {
+public class Staff {
 }
