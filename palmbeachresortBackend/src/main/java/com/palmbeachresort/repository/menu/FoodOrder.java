@@ -1,4 +1,3 @@
-// [file name]: FoodOrder.java
 package com.palmbeachresort.entity.menu;
 
 import com.palmbeachresort.entity.auth.Customer;
