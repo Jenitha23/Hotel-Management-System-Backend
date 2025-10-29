@@ -1,4 +1,3 @@
-// [file name]: FoodOrderRequest.java
 package com.palmbeachresort.dto.menu;
 
 import jakarta.validation.constraints.Size;

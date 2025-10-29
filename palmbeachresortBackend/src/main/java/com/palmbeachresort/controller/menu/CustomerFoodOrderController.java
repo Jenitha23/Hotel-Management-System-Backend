@@ -1,4 +1,3 @@
-// [file name]: CustomerFoodOrderController.java
 package com.palmbeachresort.controller.menu;
 
 import com.palmbeachresort.dto.menu.FoodOrderRequest;
