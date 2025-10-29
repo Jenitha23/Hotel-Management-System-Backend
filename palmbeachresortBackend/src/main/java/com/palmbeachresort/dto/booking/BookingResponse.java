@@ -24,7 +24,6 @@ public class BookingResponse {
     private LocalDateTime updatedAt;
     private boolean canCancel;
 
-    // Default constructor
     public BookingResponse() {}
 
     // All args constructor
@@ -51,7 +50,6 @@ public class BookingResponse {
         this.canCancel = canCancel;
     }
 
-    // Getters and Setters
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
 
