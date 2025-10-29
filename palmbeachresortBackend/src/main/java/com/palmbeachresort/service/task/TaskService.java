@@ -16,7 +16,7 @@ public interface TaskService {
     List<TaskResponse> getTasksByStatus(Task.Status status);
     List<TaskResponse> getTasksByPriority(Task.Priority priority);
 
-    // Staff operations
+    // Staff operation
     List<TaskResponse> getStaffTasks(Long staffId);
     TaskResponse getTaskById(Long taskId);
     TaskResponse updateTaskStatus(Long taskId, Long staffId, TaskStatusUpdateRequest statusUpdate);
