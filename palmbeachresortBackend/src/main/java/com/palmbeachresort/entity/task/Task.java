@@ -1,4 +1,3 @@
-// [file name]: Task.java
 package com.palmbeachresort.entity.task;
 
 import com.palmbeachresort.entity.auth.Admin;
