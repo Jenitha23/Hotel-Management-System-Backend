@@ -124,10 +124,15 @@ public class TaskServiceImpl implements TaskService {
             Staff staff = staffRepository.findById(staffId)
                     .orElseThrow(() -> new IllegalArgumentException("Staff not found with id: " + staffId));
 
+            System.out.println("📋 Task before assignment: " + task.getTitle());
+            System.out.println("👨‍💼 Staff to assign: " + staff.getFullName() + " (ID: " + staff.getId() + ")");
+
             task.setAssignedTo(staff);
             Task updatedTask = taskRepository.save(task);
 
-            // Send real-time notification
+            System.out.println("✅ Task assigned successfully");
+
+            // Send real-time notification with enhanced debugging
             sendTaskAssignmentNotification(updatedTask);
 
             return convertToResponse(updatedTask);
@@ -251,7 +256,9 @@ public class TaskServiceImpl implements TaskService {
     @Transactional(readOnly = true)
     public List<TaskResponse> getStaffTasks(Long staffId) {
         try {
+            System.out.println("🔍 Getting tasks for staff ID: " + staffId);
             List<Task> tasks = taskRepository.findByAssignedToIdOrderByCreatedAtDesc(staffId);
+            System.out.println("📋 Found " + tasks.size() + " tasks for staff " + staffId);
             return tasks.stream()
                     .map(this::convertToResponse)
                     .collect(Collectors.toList());
@@ -429,25 +436,45 @@ public class TaskServiceImpl implements TaskService {
         );
     }
 
+    // ENHANCED: Better debugging for task assignment notifications
     private void sendTaskAssignmentNotification(Task task) {
         try {
             if (task.getAssignedTo() != null) {
                 TaskResponse response = convertToResponse(task);
+                String staffId = task.getAssignedTo().getId().toString();
+                String destination = "/user/" + staffId + "/queue/task-assignments";
+
+                System.out.println("🎯 ===== TASK ASSIGNMENT NOTIFICATION =====");
+                System.out.println("📤 Sending to staff ID: " + staffId);
+                System.out.println("📮 Destination: " + destination);
+                System.out.println("📋 Task: " + task.getTitle() + " (ID: " + task.getId() + ")");
+                System.out.println("👤 Assigned to: " + task.getAssignedTo().getFullName());
+                System.out.println("🔍 Messaging Template: " + (messagingTemplate != null ? "AVAILABLE" : "NULL"));
+
                 messagingTemplate.convertAndSendToUser(
-                        task.getAssignedTo().getId().toString(),
+                        staffId,
                         "/queue/task-assignments",
                         response
                 );
-                System.out.println("📢 Task assignment notification sent to staff: " + task.getAssignedTo().getId());
+
+                System.out.println("✅ Task assignment notification sent successfully");
+                System.out.println("🎯 ===== NOTIFICATION COMPLETE =====");
+            } else {
+                System.out.println("⚠️ No staff assigned to task, skipping notification");
             }
         } catch (Exception e) {
-            System.err.println("⚠️ Warning: Could not send task assignment notification: " + e.getMessage());
+            System.err.println("❌ CRITICAL ERROR: Could not send task assignment notification");
+            System.err.println("🔴 Error: " + e.getMessage());
+            e.printStackTrace();
         }
     }
 
     private void sendTaskStatusNotification(Task task) {
         try {
             TaskResponse response = convertToResponse(task);
+
+            System.out.println("🔄 Sending status update notification");
+            System.out.println("📤 Task: " + task.getTitle() + " - Status: " + task.getStatus());
 
             // Notify admin who created the task
             messagingTemplate.convertAndSendToUser(
@@ -459,7 +486,7 @@ public class TaskServiceImpl implements TaskService {
             // Notify all admins for major updates
             messagingTemplate.convertAndSend("/topic/admin/task-updates", response);
 
-            System.out.println("📢 Task status notification sent");
+            System.out.println("✅ Task status notification sent");
         } catch (Exception e) {
             System.err.println("⚠️ Warning: Could not send task status notification: " + e.getMessage());
         }
@@ -468,6 +495,8 @@ public class TaskServiceImpl implements TaskService {
     private void sendTaskCommentNotification(Task task, TaskComment comment) {
         try {
             TaskCommentResponse response = convertCommentToResponse(comment);
+
+            System.out.println("💬 Sending comment notification for task: " + task.getTitle());
 
             // Notify task creator and assigned staff
             messagingTemplate.convertAndSendToUser(
@@ -484,7 +513,7 @@ public class TaskServiceImpl implements TaskService {
                 );
             }
 
-            System.out.println("📢 Task comment notification sent");
+            System.out.println("✅ Task comment notification sent");
         } catch (Exception e) {
             System.err.println("⚠️ Warning: Could not send task comment notification: " + e.getMessage());
         }
