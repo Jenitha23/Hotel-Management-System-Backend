@@ -1,0 +1,43 @@
+services:
+  db:
+    image: mysql:8.0
+    container_name: palm-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: "new@123"
+      MYSQL_DATABASE: "palm_beach_resort"
+      MYSQL_USER: "appuser"
+      MYSQL_PASSWORD: "apppass"
+    command: [
+      "--default-authentication-plugin=mysql_native_password",
+      "--character-set-server=utf8mb4",
+      "--collation-server=utf8mb4_unicode_ci"
+    ]
+    volumes:
+      - dbdata:/var/lib/mysql
+    # If XAMPP is using port 3306, stop it or remove this port mapping
+    ports:
+      - "3306:3306"
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-pnew@123"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  backend:
+    build: .
+    container_name: palm-backend
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      SPRING_DATASOURCE_URL: "jdbc:mysql://db:3306/palm_beach_resort?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC"
+      SPRING_DATASOURCE_USERNAME: "appuser"
+      SPRING_DATASOURCE_PASSWORD: "apppass"
+      SPRING_JPA_HIBERNATE_DDL_AUTO: "update"
+      SPRING_JPA_SHOW_SQL: "true"
+      SERVER_PORT: "8080"
+    ports:
+      - "8080:8080"
+
+volumes:
+  dbdata:
