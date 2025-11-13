@@ -1,5 +1,9 @@
 FROM eclipse-temurin:17-jre
+
 WORKDIR /app
-COPY target/*.jar app.jar
+
+COPY target/palm-beach-resort-1.0.0.jar app.jar
+
 EXPOSE 8080
+
 ENTRYPOINT ["java","-jar","/app/app.jar"]
