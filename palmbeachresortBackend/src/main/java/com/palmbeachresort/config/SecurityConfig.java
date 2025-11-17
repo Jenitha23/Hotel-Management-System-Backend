@@ -34,7 +34,7 @@ public class SecurityConfig {
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
         // Add both frontend ports
-        configuration.setAllowedOrigins(List.of("https://frontend-palmbeachresort.vercel.app/"));
+        configuration.setAllowedOrigins(List.of("https://frontend-palmbeachresort.vercel.app"));
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"));
         configuration.setAllowedHeaders(List.of("*"));
         configuration.setAllowCredentials(true);

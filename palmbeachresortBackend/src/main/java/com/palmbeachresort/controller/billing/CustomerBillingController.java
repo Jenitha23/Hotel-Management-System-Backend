@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/customer/billing")
-@CrossOrigin(origins = "http://localhost:3000", allowCredentials = "true")
+@CrossOrigin(origins = "https://frontend-palmbeachresort.vercel.app", allowCredentials = "true")
 public class CustomerBillingController {
 
     @Autowired

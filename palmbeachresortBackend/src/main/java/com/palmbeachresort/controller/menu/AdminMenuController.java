@@ -15,7 +15,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/admin/menu")
-@CrossOrigin(origins = "http://localhost:3000", allowCredentials = "true")
+@CrossOrigin(origins = "https://frontend-palmbeachresort.vercel.app", allowCredentials = "true")
 public class AdminMenuController {
 
     @Autowired

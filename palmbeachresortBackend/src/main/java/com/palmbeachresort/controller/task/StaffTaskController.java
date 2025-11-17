@@ -15,7 +15,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/staff/tasks")
-@CrossOrigin(origins = "http://localhost:3000", allowCredentials = "true")
+@CrossOrigin(origins = "https://frontend-palmbeachresort.vercel.app", allowCredentials = "true")
 public class StaffTaskController {
 
     @Autowired

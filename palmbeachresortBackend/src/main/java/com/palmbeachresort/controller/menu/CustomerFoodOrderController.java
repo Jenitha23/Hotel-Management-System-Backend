@@ -14,7 +14,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/customer/orders")
-@CrossOrigin(origins = "http://localhost:3000", allowCredentials = "true")
+@CrossOrigin(origins = "https://frontend-palmbeachresort.vercel.app", allowCredentials = "true")
 public class CustomerFoodOrderController {
 
     @Autowired
