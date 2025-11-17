@@ -19,7 +19,7 @@ public class AdminAuthController {
         this.adminAuthService = adminAuthService;
     }
 
-    // Register Admin (Only one admin allowed)
+    // Register Admin
     @PostMapping("/register")
     public ResponseEntity<AuthResponse> register(@Valid @RequestBody AdminRegRequest request) {
         AuthResponse response = adminAuthService.register(request);
