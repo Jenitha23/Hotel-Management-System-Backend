@@ -14,7 +14,8 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/admin/rooms")
-@CrossOrigin(origins = "https://frontend-palmbeachresort.vercel.app", allowCredentials = "true")
+@CrossOrigin(origins = {"https://frontend-palmbeachresort.vercel.app", "http://localhost:3000"},
+        allowCredentials = "true")
 public class AdminRoomController {
 
     @Autowired

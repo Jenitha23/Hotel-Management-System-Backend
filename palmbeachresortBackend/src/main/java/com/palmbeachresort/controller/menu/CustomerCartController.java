@@ -13,7 +13,8 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/customer/cart")
-@CrossOrigin(origins = "https://frontend-palmbeachresort.vercel.app", allowCredentials = "true")
+@CrossOrigin(origins = {"https://frontend-palmbeachresort.vercel.app", "http://localhost:3000"},
+        allowCredentials = "true")
 public class CustomerCartController {
 
     @Autowired

@@ -12,7 +12,8 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/admin/bookings")
-@CrossOrigin(origins = "https://frontend-palmbeachresort.vercel.app", allowCredentials = "true")
+@CrossOrigin(origins = {"https://frontend-palmbeachresort.vercel.app", "http://localhost:3000"},
+        allowCredentials = "true")
 public class AdminBookingController {
 
     @Autowired
