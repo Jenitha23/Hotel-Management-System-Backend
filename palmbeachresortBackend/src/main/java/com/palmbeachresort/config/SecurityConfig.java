@@ -57,9 +57,7 @@ public class SecurityConfig {
                         .requestMatchers(
                                 "/api/customers/auth/register",
                                 "/api/customers/auth/login",
-                                "/api/staff/auth/register",
                                 "/api/staff/auth/login",
-                                "/api/admin/auth/register",
                                 "/api/admin/auth/login",
                                 "/api/auth/login",
                                 "/api/auth/logout",
@@ -71,11 +69,23 @@ public class SecurityConfig {
                                 "/error"
                         ).permitAll()
 
-                        // Protected endpoints
+                        // Staff/Admin login endpoints - Public but hidden in UI
+                        .requestMatchers(
+                                "/api/staff/auth/login",         // Staff login API public
+                                "/api/admin/auth/login"          // Admin login API public
+                        ).permitAll()
 
+                        // Protected registration endpoints - Only admins can access
+                        .requestMatchers("/api/staff/auth/register").hasAuthority("ADMIN")
+                        .requestMatchers("/api/admin/auth/register").hasAuthority("ADMIN")
 
+                        // Staff management endpoints - ADMIN only (MOVE THESE UP)
+                        .requestMatchers("/api/staff").hasAuthority("ADMIN")
+                        .requestMatchers("/api/staff/**").hasAuthority("ADMIN")
+                        .requestMatchers("/api/admin/staff/**").hasAuthority("ADMIN")
+
+                        // Role-based access for other endpoints
                         .requestMatchers("/api/customer/**").hasAnyAuthority("CUSTOMER", "ADMIN")
-                        .requestMatchers("/api/staff/**").hasAnyAuthority("STAFF", "ADMIN")
                         .requestMatchers("/api/admin/**").hasAuthority("ADMIN")
                         .requestMatchers("/api/customer/bookings/**").hasAnyAuthority("CUSTOMER", "ADMIN")
                         .requestMatchers("/api/admin/bookings/**").hasAuthority("ADMIN")
@@ -87,5 +97,4 @@ public class SecurityConfig {
                 .addFilterBefore(sessionAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class);
 
         return http.build();
-    }
-}
+    }}
